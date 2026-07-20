@@ -121,3 +121,51 @@ document.addEventListener("mousemove", (e) => {
     glow.remove();
   }, 800);
 });
+function toggleMusic(){
+
+const music=document.getElementById("bgMusic");
+
+if(music.paused){
+music.play();
+}else{
+music.pause();
+}
+
+}
+
+function fireworks(){
+
+for(let i=0;i<120;i++){
+
+const f=document.createElement("div");
+
+f.className="firework";
+
+f.style.left="50%";
+f.style.top="50%";
+
+document.body.appendChild(f);
+
+const x=(Math.random()-0.5)*900;
+const y=(Math.random()-0.5)*900;
+
+f.animate([
+{
+transform:"translate(0,0)",
+opacity:1
+},
+{
+transform:`translate(${x}px,${y}px)`,
+opacity:0
+}
+],{
+duration:1800
+});
+
+setTimeout(()=>{
+f.remove();
+},1800);
+
+}
+
+}
