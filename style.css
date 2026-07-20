@@ -1,0 +1,153 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:linear-gradient(135deg,#0b1f4d,#4da6ff,#ffffff);
+background-size:400% 400%;
+animation:bg 12s ease infinite;
+overflow-x:hidden;
+color:white;
+}
+
+@keyframes bg{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+.hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+}
+
+.hero h1{
+font-size:55px;
+text-shadow:0 0 20px #fff;
+margin-bottom:20px;
+}
+
+.typing{
+font-size:20px;
+max-width:700px;
+margin-bottom:30px;
+}
+
+button{
+padding:15px 35px;
+font-size:18px;
+border:none;
+border-radius:50px;
+background:white;
+color:#1565c0;
+cursor:pointer;
+transition:.4s;
+box-shadow:0 0 25px rgba(255,255,255,.6);
+}
+
+button:hover{
+transform:scale(1.08);
+background:#d9f2ff;
+}
+
+.hidden{
+display:none;
+}
+
+.glass{
+width:90%;
+max-width:900px;
+margin:60px auto;
+padding:40px;
+background:rgba(255,255,255,.18);
+backdrop-filter:blur(20px);
+border-radius:25px;
+border:1px solid rgba(255,255,255,.3);
+box-shadow:0 15px 35px rgba(0,0,0,.2);
+}
+
+.glass h2{
+text-align:center;
+margin-bottom:30px;
+font-size:40px;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+gap:20px;
+margin-bottom:40px;
+}
+
+.card{
+background:rgba(255,255,255,.15);
+padding:30px;
+border-radius:20px;
+text-align:center;
+font-size:22px;
+transition:.4s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 0 25px white;
+}
+
+#text{
+font-size:20px;
+line-height:2;
+text-align:center;
+}
+
+.stars{
+position:fixed;
+width:100%;
+height:100%;
+background-image:radial-gradient(white 1px,transparent 1px);
+background-size:40px 40px;
+opacity:.35;
+animation:moveStars 80s linear infinite;
+z-index:-1;
+}
+
+@keyframes moveStars{
+from{
+transform:translateY(0);
+}
+to{
+transform:translateY(-2000px);
+}
+}
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:38px;
+}
+
+.glass{
+padding:25px;
+}
+
+.glass h2{
+font-size:30px;
+}
+
+#text{
+font-size:17px;
+}
+
+button{
+font-size:16px;
+padding:12px 28px;
+}
+
+}
