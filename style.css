@@ -177,3 +177,60 @@ border-radius:50%;
 background:white;
 pointer-events:none;
 }
+#quote{
+
+font-size:28px;
+
+text-align:center;
+
+min-height:120px;
+
+font-weight:600;
+
+animation:fade 1s;
+
+}
+
+@keyframes fade{
+
+from{
+
+opacity:0;
+
+transform:translateY(20px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+.rose{
+
+position:fixed;
+
+top:-40px;
+
+font-size:28px;
+
+pointer-events:none;
+
+animation:fall linear forwards;
+
+}
+
+@keyframes fall{
+
+to{
+
+transform:translateY(110vh) rotate(360deg);
+
+}
+
+}
