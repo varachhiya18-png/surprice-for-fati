@@ -234,3 +234,65 @@ rose.remove();
 }
 
 fallingRoses();
+// Hide Loader
+window.addEventListener("load",()=>{
+
+setTimeout(()=>{
+
+document.getElementById("loader").style.opacity="0";
+
+setTimeout(()=>{
+
+document.getElementById("loader").style.display="none";
+
+},1000);
+
+},2500);
+
+});
+
+// Smooth Animation
+document.querySelectorAll("section").forEach(sec=>{
+
+sec.classList.add("fadeIn");
+
+});
+
+// Confetti
+function confetti(){
+
+for(let i=0;i<150;i++){
+
+const c=document.createElement("div");
+
+c.innerHTML=["💙","🤍","✨","🎉"][Math.floor(Math.random()*4)];
+
+c.style.position="fixed";
+
+c.style.left=Math.random()*100+"vw";
+
+c.style.top="-20px";
+
+c.style.fontSize=(18+Math.random()*20)+"px";
+
+c.style.pointerEvents="none";
+
+document.body.appendChild(c);
+
+c.animate([
+
+{transform:"translateY(0)"},
+
+{transform:`translateY(${window.innerHeight+100}px)`}
+
+],{
+
+duration:3000+Math.random()*2000
+
+});
+
+setTimeout(()=>c.remove(),5000);
+
+}
+
+}
