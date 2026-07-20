@@ -234,3 +234,51 @@ transform:translateY(110vh) rotate(360deg);
 }
 
 }
+#loader{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:#081b4b;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+z-index:99999;
+transition:1s;
+}
+
+.loader-heart{
+font-size:70px;
+animation:heartbeat 1s infinite;
+}
+
+#loader h2{
+margin-top:20px;
+color:white;
+letter-spacing:2px;
+}
+
+@keyframes heartbeat{
+0%{transform:scale(1);}
+25%{transform:scale(1.25);}
+50%{transform:scale(1);}
+75%{transform:scale(1.25);}
+100%{transform:scale(1);}
+}
+
+.fadeIn{
+animation:fadePage 1s;
+}
+
+@keyframes fadePage{
+from{
+opacity:0;
+transform:translateY(30px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
