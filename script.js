@@ -169,3 +169,68 @@ f.remove();
 }
 
 }
+const quotes=[
+
+"Your smile can brighten even the darkest day. 🤍",
+
+"Some people become special without even trying. 💙",
+
+"You deserve happiness every single day. ✨",
+
+"Stay exactly the way you are. 🌸",
+
+"Keep smiling... it suits you the best. 😊"
+
+];
+
+let q=0;
+
+setInterval(()=>{
+
+const box=document.getElementById("quote");
+
+if(box){
+
+box.innerHTML=quotes[q];
+
+q=(q+1)%quotes.length;
+
+}
+
+},3000);
+
+function showFinal(){
+
+document.getElementById("quotes").style.display="none";
+
+document.getElementById("finalPage").style.display="block";
+
+}
+
+function fallingRoses(){
+
+setInterval(()=>{
+
+const rose=document.createElement("div");
+
+rose.className="rose";
+
+rose.innerHTML="🌹";
+
+rose.style.left=Math.random()*100+"vw";
+
+rose.style.animationDuration=(4+Math.random()*5)+"s";
+
+document.body.appendChild(rose);
+
+setTimeout(()=>{
+
+rose.remove();
+
+},9000);
+
+},600);
+
+}
+
+fallingRoses();
